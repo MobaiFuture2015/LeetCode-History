@@ -1,0 +1,32 @@
+public class Solution {
+    public static int reverse(int x) {
+        if(x==0){
+        	return x;
+        }
+        if(x>0){
+        	Integer y=(Integer)x;
+        	String z=y.toString();
+        	char[] c=z.toCharArray();
+        	StringBuffer sb=new StringBuffer();
+        	for(int i=c.length-1;i>=0;i--){
+        		sb.append(c[i]);
+        	}
+        	String d=sb.toString();
+        	int result=Integer.parseInt(d);
+        	return result;
+        }
+        if(x<0){
+        	Integer y=(Integer)(-x);
+        	String z=y.toString();
+        	char[] c=z.toCharArray();
+        	StringBuffer sb=new StringBuffer();
+        	for(int i=c.length-1;i>=0;i--){
+        		sb.append(c[i]);
+        	}
+        	String d=sb.toString();
+        	int result=Integer.parseInt(d);
+        	return -result;
+        }
+        return (Integer) null;
+    }
+}
